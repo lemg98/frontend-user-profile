@@ -1,0 +1,75 @@
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* ✅ Add this */
+  overflow-y: auto;       /* allow scrolling if content is tall */
+  overflow-x: hidden;
+}
+
+.user-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 4px solid #ffffff;
+  flex-shrink: 0; /* ✅ Prevent image from shrinking on small screens */
+}
+
+.user-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .user-profile {
+    padding: 3rem;
+  }
+
+  .user-avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .user-sections {
+    gap: 2rem;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

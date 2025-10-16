@@ -1,0 +1,48 @@
+.geo-card {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.geo-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151; /* gray-700 */
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.geo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem 2rem;
+  color: #374151;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+/* Responsive design */
+@media (min-width: 640px) {
+  .geo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+body {
+  background-color: #f9fafb; /* subtle light gray */
+}
